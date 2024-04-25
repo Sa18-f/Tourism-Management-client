@@ -28,10 +28,10 @@ const Navbar = () => {
             </div>
             <div className="navbar-end lg:gap-3">
                 <Link to="/login">
-                    <a className="btn bg-green-500 text-white">Login</a>
+                    <button className="btn bg-green-500 text-white">Login</button>
                 </Link>
                 <Link to="/register">
-                    <a className="btn bg-blue-400 text-white">Register</a>
+                    <button className="btn bg-blue-400 text-white">Register</button>
                 </Link>
             </div>
         </div>

@@ -1,24 +1,29 @@
-import Swal from 'sweetalert2'
+
+import Swal from "sweetalert2";
 
 const AddSpots = () => {
     const handleAddSpot = event => {
         event.preventDefault();
         const form = event.target;
+        const tourists_spot_name = form.tourists_spot_name.value;
+        const location = form.location.value;
+        const country_Name = form.country_Name.value;
+        const average_cost = form.average_cost.value;
+        const seasonality = form.seasonality.value;
+        const travel_time = form.travel_time.value;
+        const totalVisitorsPerYear = form.totalVisitorsPerYear.value;
+        const description = form.description.value;
         const name = form.name.value;
-        const quantity = form.quantity.value;
-        const supplier = form.supplier.value;
-        const taste = form.taste.value;
-        const category = form.category.value;
-        const details = form.details.value;
+        const email = form.email.value;
         const photo = form.photo.value;
-        const newCoffee = { name, quantity, supplier, taste, category, details, photo };
-        console.log(newCoffee);
-        fetch('http://localhost:5000/coffee', {
+        const newSpot = { tourists_spot_name, location, country_Name, average_cost, seasonality, travel_time,totalVisitorsPerYear, description, name, email, photo };
+        console.log(newSpot);
+        fetch('http://localhost:4000/spot', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(newCoffee)
+            body: JSON.stringify(newSpot)
         })
             .then(res => res.json())
             .then(data => {
