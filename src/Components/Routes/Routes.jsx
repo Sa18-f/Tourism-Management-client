@@ -7,12 +7,14 @@ import MyList from "../MyList/MyList";
 import Login from "../Login/Login";
 import Register from "../Register/Register";
 import ViewDetails from "../ViewDetails/ViewDetails";
+import ErrorPage from "../ErrorPage/ErrorPage";
 
 
 const Routes = createBrowserRouter([
     {
        path: '/',
        element: <Root></Root>,
+       errorElement: <ErrorPage></ErrorPage>,
        children: [
         {
             path: '/',
