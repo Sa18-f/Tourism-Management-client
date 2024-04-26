@@ -1,9 +1,17 @@
+import { useLoaderData } from "react-router-dom";
+import SpotsCard from "../SpotsCard/SpotsCard";
 
 
 const AllSpots = () => {
+    const spots = useLoaderData();
     return (
-        <div>
-            <h1>All spots are here</h1>
+        <div className='grid md:grid-cols-3 gap-4'>
+            {
+                spots.map(spots => <SpotsCard
+                    key={spots._id}
+                    spots={spots}
+                ></SpotsCard>)
+            }
         </div>
     );
 };

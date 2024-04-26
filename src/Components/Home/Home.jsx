@@ -9,6 +9,7 @@ const Home = () => {
   return (
     <div>
       <Header></Header>
+      {/* Tourist spots */}
       <h1 className='text-6xl text-center my-8 font-bold'>Famous Tourist <br /> Spots</h1>
       <div className='grid md:grid-cols-3 gap-4'>
         {

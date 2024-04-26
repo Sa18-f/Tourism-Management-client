@@ -25,7 +25,8 @@ const Routes = createBrowserRouter([
         },
         {
             path: '/allSpots',
-            element: <AllSpots></AllSpots>
+            element: <AllSpots></AllSpots>,
+            loader: () => fetch('http://localhost:4000/spots')
         },
         {
             path: '/myList',
