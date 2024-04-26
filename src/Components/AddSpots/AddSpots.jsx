@@ -18,7 +18,7 @@ const AddSpots = () => {
         const photo = form.photo.value;
         const newSpot = { tourists_spot_name, location, country_Name, average_cost, seasonality, travel_time,totalVisitorsPerYear, description, name, email, photo };
         console.log(newSpot);
-        fetch('http://localhost:4000/spot', {
+        fetch('http://localhost:4000/spots', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
