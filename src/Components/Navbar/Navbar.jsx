@@ -1,9 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import UseAuth from "../../Hooks/UseAuth";
 
-
-
-
 const Navbar = () => {
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
@@ -38,7 +35,7 @@ const Navbar = () => {
                         </div>
                         <button
                             onClick={logout}
-                            className="btn">Logout</button>
+                            className="btn btn-primary">Logout</button>
                     </div>
                         :
                         <div className="flex gap-1">
