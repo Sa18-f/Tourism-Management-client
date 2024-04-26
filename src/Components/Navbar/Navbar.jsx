@@ -1,4 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
+import UseAuth from "../../Hooks/UseAuth";
+
+
 
 
 const Navbar = () => {
@@ -8,6 +11,7 @@ const Navbar = () => {
         <li><NavLink to="/addSpot">Add Spot</NavLink></li>
         <li><NavLink to="/myList">My List</NavLink></li>
     </>
+    const { logout, user } = UseAuth();
     return (
         <div className="navbar bg-base-100">
             <div className="navbar-start">
@@ -27,12 +31,29 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end lg:gap-3">
-                <Link to="/login">
-                    <button className="btn bg-green-500 text-white">Login</button>
-                </Link>
-                <Link to="/register">
-                    <button className="btn bg-blue-400 text-white">Register</button>
-                </Link>
+                {
+                    user ? <div className="flex justify-center items-center gap-2">
+                        <div className="tooltip tooltip-bottom" data-tip={user?.displayName || 'user name not found'}>
+                            <img className="w-10 rounded-full" src={user?.photoURL || "https://i.ibb.co/LnFWKKk/download-8.jpg"} />
+                        </div>
+                        <button
+                            onClick={logout}
+                            className="btn">Logout</button>
+                    </div>
+                        :
+                        <div className="flex gap-1">
+                            <div>
+                                <Link to="/login">
+                                    <button className="btn bg-green-500 text-white">Login</button>
+                                </Link>
+                            </div>
+                            <div>
+                                <Link to="/register">
+                                    <button className="btn bg-blue-400 text-white">Register</button>
+                                </Link>
+                            </div>
+                        </div>
+                }
             </div>
         </div>
     );
