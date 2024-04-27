@@ -40,18 +40,6 @@ const Register = () => {
         const { email, password } = data;
         createUser(email, password)
             .then(result => {
-                const user = {email};
-                fetch('http://localhost:4000/user', {
-                    method: "POST",
-                    headers: {
-                        'content-type': 'application/json'
-                    },
-                    body: JSON.stringify(user)
-                })
-                .then(res => res.json())
-                .then(data => {
-                    console.log(data)
-                })
                 if (result.user) {
                     navigate(form);
                 }

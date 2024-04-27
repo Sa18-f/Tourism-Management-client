@@ -1,8 +1,6 @@
-import UseAuth from '../../Hooks/UseAuth'; 
-import Swal from "sweetalert2";
 
-const AddSpots = () => {
-    const { user } = UseAuth();
+
+const UpdatePage = () => {
     const handleAddSpot = event => {
         event.preventDefault();
         const form = event.target;
@@ -17,31 +15,10 @@ const AddSpots = () => {
         const name = form.name.value;
         const email = form.email.value;
         const photo = form.photo.value;
-        const newSpot = { tourists_spot_name, location, country_Name, average_cost, seasonality, travel_time,totalVisitorsPerYear, description, name, email, photo };
-        console.log(newSpot);
-        fetch('http://localhost:4000/spots', {
-            method: "POST",
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(newSpot)
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                if (data.insertedId) {
-                    Swal.fire({
-                        title: 'Success!',
-                        text: 'Coffee added successfully',
-                        icon: 'success',
-                        confirmButtonText: 'Close'
-                    })
-                }
-            })
+        const updatedSpot = { tourists_spot_name, location, country_Name, average_cost, seasonality, travel_time, totalVisitorsPerYear, description, name, email, photo };
     }
     return (
         <div className="bg-[#F4F3F0] p-24">
-            <h2 className="text-3xl font-extrabold">Add a Spot</h2>
             <form onSubmit={handleAddSpot}>
                 {/* form name and quantity row */}
                 <div className="md:flex mb-8">
@@ -119,25 +96,6 @@ const AddSpots = () => {
                         </label>
                     </div>
                 </div>
-                {/* form email and name */}
-                <div className="md:flex mb-8">
-                    <div className="form-control md:w-1/2">
-                        <label className="label">
-                            <span className="label-text">Your Name</span>
-                        </label>
-                        <label className="input-group">
-                            <input type="text" name="name" placeholder="Your Name" className="input input-bordered w-full" defaultValue={user? user.displayName : ''}/>
-                        </label>
-                    </div>
-                    <div className="form-control md:w-1/2 ml-4">
-                        <label className="label">
-                            <span className="label-text">Your Email</span>
-                        </label>
-                        <label className="input-group">
-                            <input type="text" name="email" placeholder="Your email" className="input input-bordered w-full" defaultValue={user? user.email : ''}/>
-                        </label>
-                    </div>
-                </div>
                 {/* form Photo url row */}
                 <div className="mb-8">
                     <div className="form-control w-full">
@@ -149,11 +107,10 @@ const AddSpots = () => {
                         </label>
                     </div>
                 </div>
-                <input type="submit" value="Add" className="btn btn-block bg-green-400 text-xl" />
-
+                <input type="submit" value="Update" className="btn btn-block bg-green-400 text-xl" />
             </form>
         </div>
     );
 };
 
-export default AddSpots;
+export default UpdatePage;

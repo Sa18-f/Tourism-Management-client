@@ -3,16 +3,12 @@ import { useLoaderData, useParams } from "react-router-dom";
 
 
 const ViewDetails = () => {
-    // const [sortedReadBooks, setSortedReadBooks] = useState([]);
+
     const spots = useLoaderData();
     const { id } = useParams();
     const spot = spots.find(spot => spot._id === id);
 
 
-    // const handleSortBy = (order) => {
-    //     // const sorted = [...readBooks].sort((x, y) => y[order] - x[order]);
-    //     // setSortedReadBooks(sorted);
-    // }
     return (
         <div>
             <div className="flex lg:flex-row  flex-col justify-between bg-base-100 shadow-xl rounded-xl lg:my-8">

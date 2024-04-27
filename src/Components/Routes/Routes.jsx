@@ -9,6 +9,7 @@ import Register from "../Register/Register";
 import ViewDetails from "../ViewDetails/ViewDetails";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import UpdatePage from "../UpdatePage/UpdatePage";
 
 
 const Routes = createBrowserRouter([
@@ -53,6 +54,10 @@ const Routes = createBrowserRouter([
                     <ViewDetails></ViewDetails>
                 </PrivateRoute>,
                 loader: () => fetch('http://localhost:4000/spots')
+            },
+            {
+                path: '/updatePage',
+                element: <UpdatePage></UpdatePage>
             }
         ]
     }
