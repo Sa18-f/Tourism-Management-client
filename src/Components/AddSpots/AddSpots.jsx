@@ -18,7 +18,6 @@ const AddSpots = () => {
         const email = form.email.value;
         const photo = form.photo.value;
         const newSpot = { tourists_spot_name, location, country_Name, average_cost, seasonality, travel_time,totalVisitorsPerYear, description, name, email, photo };
-        console.log(newSpot);
         fetch('http://localhost:4000/spots', {
             method: "POST",
             headers: {
@@ -32,7 +31,7 @@ const AddSpots = () => {
                 if (data.insertedId) {
                     Swal.fire({
                         title: 'Success!',
-                        text: 'Coffee added successfully',
+                        text: 'Spot added successfully',
                         icon: 'success',
                         confirmButtonText: 'Close'
                     })

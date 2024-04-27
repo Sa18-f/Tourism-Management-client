@@ -38,7 +38,8 @@ const Routes = createBrowserRouter([
                 path: '/myList',
                 element: <PrivateRoute>
                     <MyList></MyList>
-                </PrivateRoute>
+                </PrivateRoute>,
+                loader: () => fetch('http://localhost:4000/spots')
             },
             {
                 path: '/login',
@@ -56,8 +57,9 @@ const Routes = createBrowserRouter([
                 loader: () => fetch('http://localhost:4000/spots')
             },
             {
-                path: '/updatePage',
-                element: <UpdatePage></UpdatePage>
+                path: '/updatePage/:id',
+                element: <UpdatePage></UpdatePage>,
+                loader: ({params}) => fetch(`http://localhost:4000/spots/${params.id}`)
             }
         ]
     }
