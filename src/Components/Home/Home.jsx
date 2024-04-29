@@ -1,69 +1,108 @@
 import { useLoaderData } from "react-router-dom";
 import Header from "../Header/Header";
 import SpotsCard from "../SpotsCard/SpotsCard";
+import { useState } from "react";
+import { useTypewriter } from "react-simple-typewriter";
+import { Zoom } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
+
 
 
 
 const Home = () => {
   const spots = useLoaderData();
   const firstSixSpots = spots.slice(0, 6);
+  const { text } = useTypewriter({
+    words: ['Spots', 'Places'],
+    loop: {},
+    typeSpeed: 120,
+    deleteSpeed: 80,
+  });
+
+  const [darkTheme, setDarkTheme] = useState(false);
+
+  // Function to toggle the theme
+  const toggleTheme = () => {
+    setDarkTheme(prevTheme => !prevTheme);
+  };
   return (
-    <div>
+    <div className={`theme-${darkTheme ? 'dark' : 'light'}`}>
+      <div className="flex justify-end pr-2">
+        <input type="checkbox" defaultChecked={darkTheme} className="toggle theme-controller" onClick={toggleTheme} />
+        {darkTheme && (
+          <style>
+            {`
+            .theme-dark {
+              background-color: #111;
+              color: #fff;
+            }
+          `}
+          </style>
+        )}
+      </div>
       <Header></Header>
       {/* Tourist spots */}
-      <h1 className='text-6xl text-center my-8 font-bold'>Famous Tourist <br /> Spots</h1>
-      <div className='grid md:grid-cols-3 gap-4'>
-        {
-          firstSixSpots.map(spots => <SpotsCard
-            key={spots._id}
-            spots={spots}
-          ></SpotsCard>)
-        }
-      </div>
-      {/* my section 1 */}
-      <section className="my-12">
-        <h1 className="text-5xl font-bold">Start Your Vacation with<br /> Our Special Services!</h1>
-        <div className="mt-10 grid lg:grid-cols-3 gap-5">
-          {/* card 1 */}
-          <div className="card glass">
-            <figure><img src="https://i.ibb.co/8PQ0DHp/josiah-weiss-tth-Ks4-A7-XMY-unsplash.jpg" alt="car!" /></figure>
-            <div className="card-body">
-              <h2 className="card-title">Ship Cruises</h2>
-              <p>Unlike ocean liners, which are used for transport, cruise ships typically embark on round-trip voyages to various ports of call, where passengers may go on tours known as "shore excursions".</p>
-              <div className="card-actions justify-end">
-                <button className="btn btn-accent">Book now!</button>
-              </div>
-            </div>
-          </div>
-          {/* card 2 */}
-          <div className="card glass">
-            <figure><img src="https://i.ibb.co/Ntjzqr8/event.jpg" alt="car!" /></figure>
-            <div className="card-body">
-              <h2 className="card-title">Event Tours</h2>
-              <p>Celebrate local culture on one of our Special Event Tours. You'll visit destination at its most vibrant, during a cultural event or festive season. You can create an event tour plan with our agency.</p>
-              <div className="card-actions justify-end">
-                <button className="btn btn-accent">Book now!</button>
-              </div>
-            </div>
-          </div>
-          {/* card 3 */}
-          <div className="card glass">
-            <figure><img src="https://i.ibb.co/g4ppDrc/mountain.jpg" alt="car!" /></figure>
-            <div className="card-body">
-              <h2 className="card-title">Mountain Tours</h2>
-              <p>The mountain destinations within a broader context and covers topics around the three major pillars: sustainable development and planning, investments and incentives, and operational issues.</p>
-              <div className="card-actions justify-end">
-                <button className="btn btn-accent">Book now!</button>
-              </div>
-            </div>
-          </div>
+      <h1 className='text-6xl text-center my-8 font-bold' style={{ margin: '50px' }}>Famous Tourist {''}
+        <span style={{ fontWeight: 'bold', color: 'green' }}>
+          {text}
+        </span>
+      </h1>
+      <Zoom>
+        <div className='grid md:grid-cols-3 gap-4'>
+          {
+            firstSixSpots.map(spots => <SpotsCard
+              key={spots._id}
+              spots={spots}
+            ></SpotsCard>)
+          }
         </div>
-      </section>
+      </Zoom>
+      {/* my section 1 */}
+      <Fade>
+        <section className="my-12">
+          <h1 className="text-5xl font-bold">Start Your Vacation with<br /> Our Special Services!</h1>
+          <div className="mt-10 grid lg:grid-cols-3 gap-5">
+            {/* card 1 */}
+            <div className="card glass">
+              <figure><img src="https://i.ibb.co/8PQ0DHp/josiah-weiss-tth-Ks4-A7-XMY-unsplash.jpg" alt="car!" /></figure>
+              <div className="card-body">
+                <h2 className="card-title">Ship Cruises</h2>
+                <p>Unlike ocean liners, which are used for transport, cruise ships typically embark on round-trip voyages to various ports of call, where passengers may go on tours known as shore excursions.</p>
+                <div className="card-actions justify-end">
+                  <button className="btn btn-accent">Book now!</button>
+                </div>
+              </div>
+            </div>
+            {/* card 2 */}
+            <div className="card glass">
+              <figure><img src="https://i.ibb.co/Ntjzqr8/event.jpg" alt="car!" /></figure>
+              <div className="card-body">
+                <h2 className="card-title">Event Tours</h2>
+                <p>Celebrate local culture on one of our Special Event Tours. You will visit destination at its most vibrant, during a cultural event or festive season. You can create an event tour plan with our agency.</p>
+                <div className="card-actions justify-end">
+                  <button className="btn btn-accent">Book now!</button>
+                </div>
+              </div>
+            </div>
+            {/* card 3 */}
+            <div className="card glass">
+              <figure><img src="https://i.ibb.co/g4ppDrc/mountain.jpg" alt="car!" /></figure>
+              <div className="card-body">
+                <h2 className="card-title">Mountain Tours</h2>
+                <p>The mountain destinations within a broader context and covers topics around the three major pillars: sustainable development and planning, investments and incentives, and operational issues.</p>
+                <div className="card-actions justify-end">
+                  <button className="btn btn-accent">Book now!</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </Fade>
       {/* my section 2 */}
       <section className="my-12">
         <div className="text-center my-5">
           <h1 className="text-5xl font-bold">Why Choose Us</h1>
-          <p className="my-5">JourneyMingle is a travel search engine that helps you find the best travel options. Once you have <br /> found what you're  looking for, you are redirected to the airline or travel agent's site <br />where you make your booking directly.</p>
+          <p className="my-5">JourneyMingle is a travel search engine that helps you find the best travel options. Once you have <br /> found what you are  looking for, you are redirected to the airline or travel agent’s site <br />where you make your booking directly.</p>
         </div>
         <div className="grid grid-cols-4 gap-6 my-12">
           <div className="col-span-2 border-2 rounded-xl border-[#FBB56333] bg-[#FBB5630D] p-6">
@@ -79,7 +118,7 @@ const Home = () => {
           <div className="col-start-2 col-span-2 border-2 rounded-xl border-[#E9444433] bg-[#E944440D] p-6">
             <img src="https://i.ibb.co/T19Lg5V/Group-26.png" alt="" />
             <h4 className="card-title mt-4 mb-3">Best Price Guarantee</h4>
-            <p className="card-description">Finding flights is easy here, over 100 million savvy travellers come to us each month to find cheap flight tickets, hotels and car hire. Here are a few simple tips on how to get the most out of your flight search. Save money and time Whether it's the fastest flight or the smartest stay,</p>
+            <p className="card-description">Finding flights is easy here, over 100 million savvy travellers come to us each month to find cheap flight tickets, hotels and car hire. Here are a few simple tips on how to get the most out of your flight search. Save money and time Whether it’s the fastest flight or the smartest stay,</p>
           </div>
         </div>
       </section>

@@ -3,7 +3,25 @@
 const Header = () => {
     return (
         <div>
-            <h1>THis is header</h1>
+            <div className="carousel w-full">
+                <div id="item1" className="carousel-item w-full">
+                    <img src="https://i.ibb.co/jbPwKp2/traveling-banner-template-with-photo-23-2148951794.jpg" className="w-full" />
+                </div>
+                <div id="item2" className="carousel-item w-full">
+                    <img src="https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg" className="w-full" />
+                </div>
+                <div id="item3" className="carousel-item w-full">
+                    <img src="https://daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg" className="w-full" />
+                </div>
+                <div id="item4" className="carousel-item w-full">
+                    <img src="https://daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.jpg" className="w-full" />
+                </div>
+            </div>
+            <div className="flex justify-center w-full py-2 gap-2">
+                <a href="#item1" className="btn btn-xs">1</a>
+                <a href="#item2" className="btn btn-xs">2</a>
+                <a href="#item3" className="btn btn-xs">3</a>
+            </div>
         </div>
     );
 };
