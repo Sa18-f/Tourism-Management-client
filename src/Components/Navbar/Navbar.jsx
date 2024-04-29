@@ -1,7 +1,20 @@
 import { Link, NavLink } from "react-router-dom";
 import UseAuth from "../../Hooks/UseAuth";
+import { useState } from "react";
 
 const Navbar = () => {
+    const [dark, setDark] = useState(true);
+
+    // Function to toggle the theme
+    const toggleTheme = () => {
+        setDark(prevTheme => !prevTheme);
+        if (dark) {
+            document.querySelector('html').setAttribute('data-theme', 'dim');
+        }
+        else {
+            document.querySelector('html').setAttribute('data-theme', 'light');
+        }
+    };
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/allSpots">All Spot</NavLink></li>
@@ -28,6 +41,10 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end lg:gap-3">
+                <div className="pr-1">
+                    <input type="checkbox" className="toggle theme-controller" onClick={() => toggleTheme(setDark(dark))} />
+
+                </div>
                 {
                     user ? <div className="flex justify-center items-center gap-2">
                         <div className="tooltip tooltip-bottom" data-tip={user?.displayName || 'user name not found'}>

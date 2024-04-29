@@ -1,7 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import Header from "../Header/Header";
 import SpotsCard from "../SpotsCard/SpotsCard";
-import { useState } from "react";
+// import { useState } from "react";
 import { useTypewriter } from "react-simple-typewriter";
 import { Zoom } from "react-awesome-reveal";
 import { Fade } from "react-awesome-reveal";
@@ -12,38 +12,21 @@ import { Fade } from "react-awesome-reveal";
 const Home = () => {
   const spots = useLoaderData();
   const firstSixSpots = spots.slice(0, 6);
-  const { text } = useTypewriter({
+
+  // typewriter
+  const [text] = useTypewriter({
     words: ['Spots', 'Places'],
     loop: {},
     typeSpeed: 120,
     deleteSpeed: 80,
   });
 
-  const [darkTheme, setDarkTheme] = useState(false);
-
-  // Function to toggle the theme
-  const toggleTheme = () => {
-    setDarkTheme(prevTheme => !prevTheme);
-  };
   return (
-    <div className={`theme-${darkTheme ? 'dark' : 'light'}`}>
-      <div className="flex justify-end pr-2">
-        <input type="checkbox" defaultChecked={darkTheme} className="toggle theme-controller" onClick={toggleTheme} />
-        {darkTheme && (
-          <style>
-            {`
-            .theme-dark {
-              background-color: #111;
-              color: #fff;
-            }
-          `}
-          </style>
-        )}
-      </div>
+    <div>
       <Header></Header>
       {/* Tourist spots */}
-      <h1 className='text-6xl text-center my-8 font-bold' style={{ margin: '50px' }}>Famous Tourist {''}
-        <span style={{ fontWeight: 'bold', color: 'green' }}>
+      <h1 className='text-6xl text-center my-8 font-bold'>World’s Famous Tourist {''} <br />
+        <span style={{ fontWeight: 'bold', color: 'skyblue' }}>
           {text}
         </span>
       </h1>
