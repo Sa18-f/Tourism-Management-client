@@ -10,6 +10,7 @@ import ViewDetails from "../ViewDetails/ViewDetails";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import UpdatePage from "../UpdatePage/UpdatePage";
+import CountryDetailsPage from "../CountryDetailsPage/CountryDetailsPage";
 
 
 const Routes = createBrowserRouter([
@@ -60,6 +61,11 @@ const Routes = createBrowserRouter([
                 path: '/updatePage/:id',
                 element: <UpdatePage></UpdatePage>,
                 loader: ({params}) => fetch(`http://localhost:4000/spots/${params.id}`)
+            },
+            {
+                path: '/countries/:id',
+                element: <CountryDetailsPage></CountryDetailsPage>,
+                loader: () => fetch('http://localhost:4000/countries')
             }
         ]
     }

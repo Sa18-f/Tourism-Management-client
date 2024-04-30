@@ -5,6 +5,7 @@ import SpotsCard from "../SpotsCard/SpotsCard";
 import { useTypewriter } from "react-simple-typewriter";
 import { Zoom } from "react-awesome-reveal";
 import { Fade } from "react-awesome-reveal";
+import Countries from "../Countries/Countries";
 
 
 
@@ -31,7 +32,7 @@ const Home = () => {
         </span>
       </h1>
       <Zoom>
-        <div className='grid md:grid-cols-3 gap-4'>
+        <div className='grid lg:grid-cols-3 gap-4'>
           {
             firstSixSpots.map(spots => <SpotsCard
               key={spots._id}
@@ -40,6 +41,7 @@ const Home = () => {
           }
         </div>
       </Zoom>
+      <Countries></Countries>
       {/* my section 1 */}
       <Fade>
         <section className="my-12">

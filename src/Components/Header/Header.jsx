@@ -30,7 +30,7 @@ const Header = () => {
                         </div>
                         <div className='absolute text-center lg:top-[200px] top-[150px] lg:right-[80px] lg:w-[1000px] mx-auto'>
                             <h1 className='lg:text-6xl text-2xl font-bold'>Discover, Experience, Thrive!!</h1>
-                            <p className='lg:my-6 my-2 text-sm lg:text-lg'>Your Gateway to Global Exploration: Simplify your travel planning and uncover hidden gems worldwide with <span className="text-red-400 font-bold">JourneyMingle</span>. Start your journey today!</p>
+                            <p className='lg:my-6 my-2 text-sm lg:text-lg'>Discover Your Next Adventure: Seamlessly plan and manage your dream vacations with <span className="text-red-400 font-bold">JourneyMingle</span>!!</p>
                             <button className='rounded-[30px] bg-green-400 font-bold py-3 px-5 lg:mt-4 text-xl'>Explore Now</button>
                         </div>
                     </div>
@@ -43,7 +43,7 @@ const Header = () => {
                         </div>
                         <div className='absolute text-center lg:top-[200px] top-[150px] lg:right-[80px] lg:w-[1000px] mx-auto'>
                             <h1 className='lg:text-6xl text-2xl font-bold text-white'>Unlock Your Wanderlust!!</h1>
-                            <p className='lg:my-6 my-2 text-sm text-white lg:text-lg'>Your Gateway to Global Exploration: Simplify your travel planning and uncover hidden gems worldwide with <span className="text-red-400 font-bold">JourneyMingle</span>. Start your journey today!</p>
+                            <p className='lg:my-6 my-2 text-sm text-white lg:text-lg'>Unlock the world’s wonders with our comprehensive tourism management platform. Plan your dream getaway effortlessly and embark on unforgettable adventures today</p>
                             <button className='rounded-[30px] bg-green-400 font-bold py-3 px-5 lg:mt-4 text-xl'>Explore Now</button>
                         </div>
                     </div>

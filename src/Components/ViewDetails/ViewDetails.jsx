@@ -27,14 +27,6 @@ const ViewDetails = () => {
                         <p className="flex items-center font-semibold"><span className="text-lg">Total Visitors Per Year: {spot.totalVisitorsPerYear}</span></p>
                         <p className="flex items-center font-semibold"><span className="text-lg py-3">Average Cost: {spot.average_cost}</span></p>
                     </div>
-                    {/* <div className="py-4">
-                        <p className="text-lg font-semibold">Facilities:</p>
-                        <ul className="list-disc pl-6">
-                            {.facilities.map((facility, index) => (
-                                <li key={index} className="text-[#878787] my-2"> {facility}</li>
-                            ))}
-                        </ul>
-                    </div> */}
                     <p className="flex items-center font-semibold gap-1"><span className="text-lg">Seasonality: <span className="bg-slate-100 border text-green-500 rounded-xl px-3 py-1">{spot.seasonality}</span></span></p>
                 </div>
             </div>
