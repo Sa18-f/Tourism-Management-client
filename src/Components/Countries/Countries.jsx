@@ -9,7 +9,7 @@ const Countries = () => {
     useEffect(() => {
         const fetchCountries = async () => {
             try {
-                const response = await fetch('http://localhost:4000/countries');
+                const response = await fetch('https://tourism-management-server-theta.vercel.app/countries');
                 if (response.ok) {
                     const data = await response.json();
                     setCountries(data);

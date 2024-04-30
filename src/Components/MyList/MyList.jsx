@@ -10,7 +10,7 @@ const MyList = () => {
     useEffect(() => {
         if (user) {
             // Fetch user's spots data from backend
-            fetch(`http://localhost:4000/myList/${user?.email}`)
+            fetch(`https://tourism-management-server-theta.vercel.app/myList/${user?.email}`)
                 .then(res => res.json())
                 .then(data => setUserSpots(data))
                 .catch(error => console.error('Error fetching user spots:', error));
@@ -27,7 +27,7 @@ const MyList = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:4000/spots/${id}`, {
+                fetch(`https://tourism-management-server-theta.vercel.app/spots/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

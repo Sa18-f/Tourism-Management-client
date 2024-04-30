@@ -18,7 +18,7 @@ const AddSpots = () => {
         const email = form.email.value;
         const photo = form.photo.value;
         const newSpot = { tourists_spot_name, location, country_Name, average_cost, seasonality, travel_time,totalVisitorsPerYear, description, name, email, photo };
-        fetch('http://localhost:4000/spots', {
+        fetch('https://tourism-management-server-theta.vercel.app/spots', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

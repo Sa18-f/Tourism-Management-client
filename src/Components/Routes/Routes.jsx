@@ -22,7 +22,7 @@ const Routes = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:4000/spots')
+                loader: () => fetch('https://tourism-management-server-theta.vercel.app/spots')
             },
             {
                 path: '/addSpot',
@@ -33,14 +33,14 @@ const Routes = createBrowserRouter([
             {
                 path: '/allSpots',
                 element: <AllSpots></AllSpots>,
-                loader: () => fetch('http://localhost:4000/spots')
+                loader: () => fetch('https://tourism-management-server-theta.vercel.app/spots')
             },
             {
                 path: '/myList',
                 element: <PrivateRoute>
                     <MyList></MyList>
                 </PrivateRoute>,
-                loader: () => fetch('http://localhost:4000/spots')
+                loader: () => fetch('https://tourism-management-server-theta.vercel.app/spots')
             },
             {
                 path: '/login',
@@ -55,17 +55,17 @@ const Routes = createBrowserRouter([
                 element: <PrivateRoute>
                     <ViewDetails></ViewDetails>
                 </PrivateRoute>,
-                loader: () => fetch('http://localhost:4000/spots')
+                loader: () => fetch('https://tourism-management-server-theta.vercel.app/spots')
             },
             {
                 path: '/updatePage/:id',
                 element: <UpdatePage></UpdatePage>,
-                loader: ({params}) => fetch(`http://localhost:4000/spots/${params.id}`)
+                loader: ({params}) => fetch(`https://tourism-management-server-theta.vercel.app/spots/${params.id}`)
             },
             {
                 path: '/countries/:id',
                 element: <CountryDetailsPage></CountryDetailsPage>,
-                loader: () => fetch('http://localhost:4000/countries')
+                loader: () => fetch('https://tourism-management-server-theta.vercel.app/countries')
             }
         ]
     }

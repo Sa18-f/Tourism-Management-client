@@ -19,7 +19,7 @@ const UpdatePage = () => {
         const description = form.description.value;
         const photo = form.photo.value;
         const updatedSpot = { tourists_spot_name, location, country_Name, average_cost, seasonality, travel_time, totalVisitorsPerYear, description, photo };
-        fetch(`http://localhost:4000/spots/${_id}`, {
+        fetch(`https://tourism-management-server-theta.vercel.app/spots/${_id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'

@@ -2,7 +2,7 @@
 
 Welcome to Happy & Safe Travel Finder! This web application allows users to search for and manage Tourist Spots listings about the nations of southeast asia.
 
-[Live Site](https://cosmic-rugelach-ddb064.netlify.app/)
+[Live Site](https://tourism-management-6d801.web.app/)
 
 ## Features
 
