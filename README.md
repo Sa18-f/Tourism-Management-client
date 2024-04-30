@@ -1,12 +1,26 @@
-Travelify - Explore the World
+# JourneyMingle - Explore the World
 
-Live Site URL: 
+Welcome to Happy & Safe Travel Finder! This web application allows users to search for and manage Tourist Spots listings.
 
-Features:
+[Live Site](https://cosmic-rugelach-ddb064.netlify.app/)
 
-Discover Tourist Spots: Explore a vast collection of tourist spots from around the globe, complete with detailed descriptions and stunning visuals.
-Plan Your Vacation: Plan your next vacation with ease by browsing through various destinations, learning about their unique features, and adding them to your wishlist.
-Personalized Experience: Create an account to save your favorite spots, track your travel history, and receive personalized recommendations based on your interests.
-Interactive Maps: Visualize your journey by exploring interactive maps that showcase the locations of all featured tourist spots, making it easier to plan your itinerary.
-Community Engagement: Connect with fellow travelers, share your experiences, and gain insights from others through a vibrant online community dedicated to wanderlust and exploration.
-Category: Travel & Tourism
+## Features
+
+- **User Authentication**: Users can sign up, log in, and log out securely using Firebase Authentication.
+- **Update Profile**: Authenticated users can update their profile information, including their name and profile picture.
+- **Personalized Experience**: Create an account to save your favorite spots, track your travel history, and receive personalized recommendations based on your interests.
+- **Social Login**: Users have the option to log in using their Google or GitHub accounts for convenience.
+- **Private Routes**: Certain routes, such as the update profile page, are protected and can only be accessed by authenticated users.
+- **Discover Tourist Spots**: Explore a vast collection of tourist spots from around the globe, complete with detailed descriptions and stunning visuals.
+- **Plan Your Vacation**: Plan your next vacation with ease by browsing through various destinations, learning about their unique features, and adding them to your wishlist.
+
+
+## npm Packages Used
+
+- `react-awesome-reveal`: Library for animating elements as they scroll into view
+- `react`: JavaScript library for building user interfaces
+- `react-router-dom`: Declarative routing for React applications
+- `react-hook-form`: Form validation library for React
+- `firebase`: JavaScript library for Firebase platform
+- `react-toastify`: Notification library for React applications
+- `react-simple-typewriter`: Library for adding CSS animations to elements
