@@ -1,13 +1,12 @@
 # JourneyMingle - Explore the World
 
-Welcome to Happy & Safe Travel Finder! This web application allows users to search for and manage Tourist Spots listings.
+Welcome to Happy & Safe Travel Finder! This web application allows users to search for and manage Tourist Spots listings about the nations of southeast asia.
 
 [Live Site](https://cosmic-rugelach-ddb064.netlify.app/)
 
 ## Features
 
 - **User Authentication**: Users can sign up, log in, and log out securely using Firebase Authentication.
-- **Update Profile**: Authenticated users can update their profile information, including their name and profile picture.
 - **Personalized Experience**: Create an account to save your favorite spots, track your travel history, and receive personalized recommendations based on your interests.
 - **Social Login**: Users have the option to log in using their Google or GitHub accounts for convenience.
 - **Private Routes**: Certain routes, such as the update profile page, are protected and can only be accessed by authenticated users.
