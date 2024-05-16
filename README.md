@@ -2,7 +2,7 @@
 
 Welcome to Happy & Safe Travel Finder! This web application allows users to search for and manage Tourist Spots listings about the nations of southeast asia.
 
-[Live Site](https://tourism-management-6d801.web.app/)
+[Live Site](https://tourism-management-6d801.web.app)
 
 ## Features
 
@@ -23,3 +23,12 @@ Welcome to Happy & Safe Travel Finder! This web application allows users to sear
 - `firebase`: JavaScript library for Firebase platform
 - `react-toastify`: Notification library for React applications
 - `react-simple-typewriter`: Library for adding CSS animations to elements
+
+## Technologies Used
+- **Node.js**: JavaScript runtime built on Chrome's V8 JavaScript engine.
+- **Express**: Fast, unopinionated, minimalist web framework for Node.js.
+- **MongoDB**: NoSQL database for storing user data and bookings.
+- **Firebase Authentication**: Authentication system for secure user management.
+- **CORS**: Middleware to enable Cross-Origin Resource Sharing.
+- **dotenv**: Module to load environment variables from a .env file.
+- **morgan**: HTTP request logger middleware for Node.js.
