@@ -6,6 +6,7 @@ import 'swiper/css/navigation';
 // Import Swiper styles
 import "swiper/css";
 import { Navigation } from 'swiper/modules';
+import { Link } from "react-router-dom";
 
 const Header = () => {
     return (
@@ -13,7 +14,9 @@ const Header = () => {
             <div className='flex flex-col justify-center'>
                 <h1 className='lg:text-6xl text-3xl font-bold'>Explore Your World!!</h1>
                 <p className='lg:my-6 my-2 text-[#333333] lg:text-lg'>Your Gateway to Global Exploration: Simplify your travel planning and uncover hidden gems worldwide with <span className="text-sky-600 font-bold">JourneyMingle</span>. Start your journey today!</p>
-                <button className='rounded-[10px] bg-sky-600 py-3 px-5 lg:mt-4 lg:text-lg font-semibold text-sm text-white btn-outline'>Explore Now</button>
+                <Link to="/allSpots">
+                    <button className='rounded-[10px] bg-sky-600 py-3 px-5 lg:mt-4 lg:text-lg font-semibold text-sm text-white btn-outline'>Explore Now</button>
+                </Link>
             </div>
             <div className="lg:w-[750px] w-full">
                 <Swiper navigation={true} modules={[Navigation]} className="mySwiper">

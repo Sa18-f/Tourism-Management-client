@@ -15,7 +15,7 @@ const Home = () => {
 
   // typewriter
   const [text] = useTypewriter({
-    words: ['Spots', 'Places'],
+    words: ['Bali', 'Cox’s Bazar', 'Bangkok', 'Sundarban', 'Bandarban', 'Saint Martin'],
     loop: {},
     typeSpeed: 120,
     deleteSpeed: 80,
@@ -25,19 +25,18 @@ const Home = () => {
     <div>
       <Header></Header>
       {/* Tourist spots */}
-      <h1 className='text-6xl text-center my-8 font-bold'>World’s Famous Tourist {''} <br />
-        <span style={{ fontWeight: 'bold', color: '#3182ce' }}>
-          {text}
-        </span>
+      <h1 className='lg:text-5xl text-3xl text-center my-8 font-bold'>Let’s find out about <br /> <span style={{ fontWeight: 'bold', color: '#3182ce' }}>
+        {text}
+      </span>
       </h1>
-        <div className='grid lg:grid-cols-3 gap-4'>
-          {
-            firstSixSpots.map(spots => <SpotsCard
-              key={spots._id}
-              spots={spots}
-            ></SpotsCard>)
-          }
-        </div>
+      <div className='grid lg:grid-cols-3 gap-4'>
+        {
+          firstSixSpots.map(spots => <SpotsCard
+            key={spots._id}
+            spots={spots}
+          ></SpotsCard>)
+        }
+      </div>
       <Countries></Countries>
       {/* my section 1 */}
       <Fade>
