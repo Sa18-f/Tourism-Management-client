@@ -3,7 +3,6 @@ import Header from "../Header/Header";
 import SpotsCard from "../SpotsCard/SpotsCard";
 // import { useState } from "react";
 import { useTypewriter } from "react-simple-typewriter";
-import { Zoom } from "react-awesome-reveal";
 import { Fade } from "react-awesome-reveal";
 import Countries from "../Countries/Countries";
 
@@ -27,11 +26,10 @@ const Home = () => {
       <Header></Header>
       {/* Tourist spots */}
       <h1 className='text-6xl text-center my-8 font-bold'>World’s Famous Tourist {''} <br />
-        <span style={{ fontWeight: 'bold', color: 'skyblue' }}>
+        <span style={{ fontWeight: 'bold', color: '#3182ce' }}>
           {text}
         </span>
       </h1>
-      <Zoom>
         <div className='grid lg:grid-cols-3 gap-4'>
           {
             firstSixSpots.map(spots => <SpotsCard
@@ -40,7 +38,6 @@ const Home = () => {
             ></SpotsCard>)
           }
         </div>
-      </Zoom>
       <Countries></Countries>
       {/* my section 1 */}
       <Fade>

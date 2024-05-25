@@ -24,8 +24,8 @@ const Countries = () => {
         fetchCountries();
     }, []);
     return (
-        <div>
-            <h1 className="text-5xl font-bold text-center my-8">Countries</h1>
+        <div className="mb-20">
+            <h1 className="text-5xl font-bold text-center mb-8 lg:mt-20 mt-8">World’s Most Beautiful <br /> Countries</h1>
             {
                 error && <p>{error}</p>
             }

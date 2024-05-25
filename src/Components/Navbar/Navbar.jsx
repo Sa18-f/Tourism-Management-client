@@ -52,20 +52,13 @@ const Navbar = () => {
                         </div>
                         <button
                             onClick={logout}
-                            className="btn btn-primary">Logout</button>
+                            className="btn bg-red-600 text-white">Logout</button>
                     </div>
                         :
-                        <div className="flex gap-1">
-                            <div>
-                                <Link to="/login">
-                                    <button className="btn bg-green-500 text-white">Login</button>
-                                </Link>
-                            </div>
-                            <div>
-                                <Link to="/register">
-                                    <button className="btn bg-blue-400 text-white">Register</button>
-                                </Link>
-                            </div>
+                        <div>
+                            <Link to="/login">
+                                <button className="btn bg-blue-500  text-white">Login</button>
+                            </Link>
                         </div>
                 }
             </div>

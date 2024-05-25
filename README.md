@@ -25,10 +25,10 @@ Welcome to Happy & Safe Travel Finder! This web application allows users to sear
 - `react-simple-typewriter`: Library for adding CSS animations to elements
 
 ## Technologies Used
+- **React.js**: JavaScript library for building user interfaces, particularly for single-page applications.
 - **Node.js**: JavaScript runtime built on Chrome's V8 JavaScript engine.
 - **Express**: Fast, unopinionated, minimalist web framework for Node.js.
 - **MongoDB**: NoSQL database for storing user data and bookings.
 - **Firebase Authentication**: Authentication system for secure user management.
 - **CORS**: Middleware to enable Cross-Origin Resource Sharing.
 - **dotenv**: Module to load environment variables from a .env file.
-- **morgan**: HTTP request logger middleware for Node.js.
