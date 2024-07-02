@@ -14,16 +14,6 @@ Welcome to Happy & Safe Travel Finder! This web application allows users to sear
 - **Plan Your Vacation**: Plan your next vacation with ease by browsing through various destinations, learning about their unique features, and adding them to your wishlist.
 
 
-## npm Packages Used
-
-- `react-awesome-reveal`: Library for animating elements as they scroll into view
-- `react`: JavaScript library for building user interfaces
-- `react-router-dom`: Declarative routing for React applications
-- `react-hook-form`: Form validation library for React
-- `firebase`: JavaScript library for Firebase platform
-- `react-toastify`: Notification library for React applications
-- `react-simple-typewriter`: Library for adding CSS animations to elements
-
 ## Technologies Used
 - **React.js**: JavaScript library for building user interfaces, particularly for single-page applications.
 - **Node.js**: JavaScript runtime built on Chrome's V8 JavaScript engine.
@@ -32,3 +22,21 @@ Welcome to Happy & Safe Travel Finder! This web application allows users to sear
 - **Firebase Authentication**: Authentication system for secure user management.
 - **CORS**: Middleware to enable Cross-Origin Resource Sharing.
 - **dotenv**: Module to load environment variables from a .env file.
+
+
+## npm Packages Used
+
+- `react-awesome-reveal`: Library for animating elements as they scroll into view
+- `react-router-dom`: Declarative routing for React applications
+- `react-hook-form`: Form validation library for React
+- `react-simple-typewriter`: Library for adding CSS animations to elements
+- `react-toastify`: Notification library for React applications
+
+
+## Getting Started
+1. Clone the repository: `git clone https://github.com/your-username/project-name.git`
+2. Navigate to the project directory: `cd project-name`
+3. Install dependencies: `npm install`
+4. Start the project: `npm start`
+
+
